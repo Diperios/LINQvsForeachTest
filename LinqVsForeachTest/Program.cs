@@ -63,6 +63,7 @@ public class Program
 
         Console.WriteLine("\tForeach Test-");
         Stopwatch s = new Stopwatch();
+
         s.Start();
 
         bool exists = false;
@@ -75,6 +76,8 @@ public class Program
             }
         }
 
+        s.Stop();
+
         Console.WriteLine("\t\tExists=" + exists);
         Console.WriteLine("\t\tTime=" + s.ElapsedMilliseconds + "ms");
 
@@ -86,9 +89,12 @@ public class Program
         Console.WriteLine("\tLINQ Test-");
 
         Stopwatch s = new Stopwatch();
+
         s.Start();
 
         bool exists = items.Contains(itemToCheck);
+
+        s.Stop();
 
         Console.WriteLine("\t\tExists=" + exists);
         Console.WriteLine("\t\tTime=" + s.ElapsedMilliseconds + "ms");
